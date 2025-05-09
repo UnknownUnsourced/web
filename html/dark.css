@@ -1,5 +1,41 @@
-/* Apply dark background */
+/* dark.css */
 body {
-  background-color: #121212;  /* Dark background color */
-  color: white;  /* Light text color for contrast */
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 2em;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.8em;
+  margin-bottom: 0em;
+}
+
+h4 {
+  color: #333333;
+  margin-bottom: 3em;
+  margin-top: 0em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+a {
+  color: #00a2ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #32cd32;
 }
