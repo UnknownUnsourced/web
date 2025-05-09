@@ -1,0 +1,5 @@
+/* Apply dark background */
+body {
+  background-color: #121212;  /* Dark background color */
+  color: white;  /* Light text color for contrast */
+}
