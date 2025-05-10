@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Hjem</title>
   <link rel="stylesheet" href="dark.css">
 </head>
 <body>
-  <h1>Velkommen til min hjemmeside med spil</h1>
-  <h4>(version: 0.6)</h4>
+  <h1 id="random-text"></h1>
+  <h4>(version: 0.7)</h4>
   <ul>
     <li><a href="beregnprocentdelen_og_beregnnyprisefterrabat.html">Minecraft</a></li>
     <li><a href="gratis-tyske-ordbog.html">Slope</a></li>
     <li><a href="hvorfor-skal-vi-laere-dansk-naar-vi-taler-dansk.html">Swords and Sandals 2</a></li>
     <li><a href="hvordan-laver-jeg-en-rigtig-essay.html">Short life 2</a></li>
+    <li><a href="krus-og-bolle-komma.html">Break The Tower!</a></li>
+    <li><a href="et-eller-en.html">physics geam</a></li>
+    <li><a href="intetkøn-og-fælleskøn.html">Dreader</a></li>
   </ul>
+  <ul id="devlog">
+    <li><a href="devlog.html">devlog</a></li>
+  </ul>
+  <h2 id="lavet">lavet af UnknownUnsourced</h2>
+  <script>
+    const random_text = [
+      "spiller du i timen!?",
+      "vist ikke du kunne får minecraft på din browser",
+      "hvor fandt du denne website???",
+      "må jeg tisse i din mund???????????",
+      '"vi spiller fortnite. vi spiller all day, all night."',
+      "andreas odbjerg er ik' min yndlings",
+      "fuck de socialdemokratier.",
+      "wallah, må jeg får min telefon?"
+    ]
+    const får_random_lort = random_text[Math.floor(Math.random() * random_text.length)];
+    document.getElementById("random-text").textContent = får_random_lort;
+  </script>
 </body>
 </html>

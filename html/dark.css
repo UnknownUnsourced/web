@@ -31,11 +31,41 @@ li {
 a {
   color: #00a2ff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 1.5em;
+  transition: 0.1s all;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #32cd32;
+  font-family: monospace;
+  font-size: 2em;
+  color: #00e1ff;
+  transition: 0.1s all;
+  font-weight: 900;
+}
+
+#devlog {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  color: #888;
+  opacity: 0.8;
+}
+
+#lavet {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  color: #525252;
+  opacity: 0.8;
 }
