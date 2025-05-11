@@ -5,6 +5,15 @@ body {
   font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 2em;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+body.fade-in {
+  opacity: 1;
 }
 
 h1 {
@@ -35,15 +44,35 @@ a {
   font-weight: 600;
   font-size: 1.5em;
   transition: 0.1s all;
+  position: relative;
+}
+
+/* Add bullet on hover */
+
+#links::before {
+  margin-right: 0.4em;
+  color:#ffffff;
+  content: "•";
+  transition: content 0.1s ease;
+}
+
+a::before {
+  margin-right: 0.4em;
+  color:#ffffff;
+  content: "";
+  transition: content 0.1s ease;
+}
+
+#links:hover::before {
+  content: "→";
+  color: #00ff37;
 }
 
 a:hover {
   text-decoration: underline;
-  font-family: monospace;
   font-size: 2em;
-  color: #00e1ff;
-  transition: 0.1s all;
   font-weight: 900;
+  color: #00e1ff;
 }
 
 #devlog {

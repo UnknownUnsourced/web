@@ -3,18 +3,40 @@
 <head>
   <title>Hjem</title>
   <link rel="stylesheet" href="dark.css">
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+
+    /* Jeg forstår ærligt talt ikke det her. tak chatgpt*/
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+      font-size: 2rem;
+    }
+  </style>
 </head>
-<body>
   <h1 id="random-text"></h1>
   <h4>(version: 0.7)</h4>
   <ul>
-    <li><a href="beregnprocentdelen_og_beregnnyprisefterrabat.html">Minecraft</a></li>
-    <li><a href="gratis-tyske-ordbog.html">Slope</a></li>
-    <li><a href="hvorfor-skal-vi-laere-dansk-naar-vi-taler-dansk.html">Swords and Sandals 2</a></li>
-    <li><a href="hvordan-laver-jeg-en-rigtig-essay.html">Short life 2</a></li>
-    <li><a href="krus-og-bolle-komma.html">Break The Tower!</a></li>
-    <li><a href="et-eller-en.html">physics geam</a></li>
-    <li><a href="intetkøn-og-fælleskøn.html">Dreader</a></li>
+    <li><a id="links" href="beregnprocentdelen_og_beregnnyprisefterrabat.html">Minecraft</a></li>
+    <li><a id="links" href="gratis-tyske-ordbog.html">Slope</a></li>
+    <li><a id="links" href="hvorfor-skal-vi-laere-dansk-naar-vi-taler-dansk.html">Swords and Sandals 2</a></li>
+    <li><a id="links" href="hvordan-laver-jeg-en-rigtig-essay.html">Short life 2</a></li>
+    <li><a id="links" href="krus-og-bolle-komma.html">Break The Tower!</a></li>
+    <li><a id="links" href="et-eller-en.html">physics geam</a></li>
+    <li><a id="links" href="intetkoen-og-faelleskoen.html">Dreader</a></li>
   </ul>
   <ul id="devlog">
     <li><a href="devlog.html">devlog</a></li>
@@ -23,7 +45,7 @@
   <script>
     const random_text = [
       "spiller du i timen!?",
-      "vist ikke du kunne får minecraft på din browser",
+      "vist ikke du kunne få minecraft på din browser",
       "hvor fandt du denne website???",
       "må jeg tisse i din mund???????????",
       '"vi spiller fortnite. vi spiller all day, all night."',
@@ -32,7 +54,23 @@
       "wallah, må jeg får min telefon?"
     ]
     const får_random_lort = random_text[Math.floor(Math.random() * random_text.length)];
+    
+    document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // stop instant navigation
+      const url = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    });
+  });
+  </script>
+  <script>
     document.getElementById("random-text").textContent = får_random_lort;
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+    });
   </script>
 </body>
 </html>

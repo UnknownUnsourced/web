@@ -11,6 +11,16 @@
       height: 100%;
       overflow: hidden;
     }
+
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
     iframe {
       border: none;
       width: 100%;
@@ -19,6 +29,12 @@
   </style>
 </head>
 <body>
-  <iframe src="https://y8.com/embed/swords_and_sandals_2" allowfullscreen></iframe>
+  <iframe src="https://y8.com/embed/swords_and_sandals_2" allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+  <li id="lavet"><a href="index.html">Hjem</a></li>
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+    });
+  </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!-- break the tower -->
+<!-- Break the tower! -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +11,16 @@
       height: 100%;
       overflow: hidden;
     }
+
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
     iframe {
       border: none;
       width: 100%;
@@ -19,7 +29,12 @@
   </style>
 </head>
 <body>
-  <!-- kun for itch.io spil -->
-  <iframe msallowfullscreen="true" id="game_drop" src="https://html-classic.itch.zone/html/13325223/index.html" scrolling="no" allowfullscreen="true" frameborder="0" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+  <iframe msallowfullscreen="true" id="game_drop" src="https://html-classic.itch.zone/html/13325223/index.html" scrolling="no" allowfullscreen="true" frameborder="0" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
+  <li id="lavet"><a href="index.html">Hjem</a></li>
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+    });
+  </script>
 </body>
 </html>
