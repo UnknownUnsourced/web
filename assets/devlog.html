@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>devlog</title>
+    <link rel="stylesheet" href="devlog.css">
+    <link rel="icon" type="image/png" href="decals/icon.png">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transition: opacity 0.35s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- mit kode er lort (måske)😭😭 -->
+    <div id="hjem"><a href="index.html">Hjem</a></div>
+    <h1>Devlog;</h1>
+    <h4 id ="underdevlog">du er en nørd, hvis du er her.</h4>
+
+    <!-- 0.9 -->
+    <h2>0.9;</h2>
+    <h3>+ Lyd effekts;</h3>
+    <h3>+ Icon</h3>
+    <h3>+ Devlog farver</h3>
+    <h3>+ På /html/index.html;</h3>
+    <h3 id="under">+ kan man trykke på titlen for at få en ny tekst</h3>
+    <h3 id="under">+ titlen bliver stor, hvis din mus er på det.</h3>
+    <h3 id="fix">+ /html til /assets</h3>
+    <h3 id="fix">+ fixet den grå lorte linje i devlog</h3>
+    <h3 id="lort">- fjernede de lorte grammatikfejl 🥀🥀</h3>
+
+    <!-- 0.8 -->
+    <h2>0.8;</h2>
+    <h3>+ CSS magi;</h3>
+    <h3 id="under">+ Fade ind animation</h3>
+    <h3 id="under">+ Fade ud animation</h3>
+    <h3 id="under">+ Linksene ser sejere ud 😎</h3>
+    <h3>+ Hjem-knap på hver side (undtagen html/index.html)</h3>
+
+    <!-- 0.7 -->
+    <h2>0.7;</h2>
+    <h3>+ Devlog</h3>
+    <h3>+ Break The Tower!</h3>
+    <h3>+ physics geam</h3>
+    <h3>+ Dreader</h3>
+    <h3>+ Random Text ved /html/index.html</h3>
+    
+    <!-- tak wikipedia -->
+    <h2>&#8196;</h2>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = this.href;
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = url;
+        }, 350);
+        });
+    });
+    </script>
+    <script>
+        window.addEventListener("load", () => {
+            document.body.classList.add("fade-in");
+        });
+  </script>
+</body>
+</html>
