@@ -6,5 +6,5 @@ På toppen af websiten skulle der være en "< > Code" knap. Tryk på den, og så
 ```pwsh
 git clone https://github.com/UnknownUnsourced/web.git
 cd web
+.\index.html
 ```
-og så åben index.html
