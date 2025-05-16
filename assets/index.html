@@ -56,8 +56,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
+      z-index: 99999;
       font-family: sans-serif;
+      transition: opacity 0.35s ease-in-out;
+    }
+
+    #overlay.fade-out {
+      opacity: 0;
     }
   </style>
 </head>
@@ -187,7 +192,7 @@
       if (musik.muted) {
         tekst.textContent = "Spiller nu: " + navn[id];
       } else {
-        tekst.textContent = "Musiken er muted"
+        tekst.textContent = "Musikken er muted"
       }
     }
 
@@ -199,23 +204,35 @@
     window.addEventListener("click", function startMusik() {
       if (musik.paused) {
         musik.muted = true;
+        musik.volume = 0.25;
         spilmusik(ligenu);
         const overlay = document.getElementById("overlay");
-        if (overlay) overlay.remove();
         window.removeEventListener("click", startMusik);
-        document.getElementById("bottom-center-text").textContent = "Musiken er muted\n(klik me for at unmute)";
+        document.getElementById("bottom-center-text").textContent = "Musikken er pauset\n(klik mig for at unmute)";
       }
     });
 
     function muteEllerumuted() {
       if (musik.muted) {
         musik.muted = false;
+        musik.play();
         document.getElementById("bottom-center-text").textContent = "Spiller nu: " + navn[ligenu];
       } else {
         musik.muted = true;
-        document.getElementById("bottom-center-text").textContent = "Musiken er muted";
+        musik.pause();
+        document.getElementById("bottom-center-text").textContent = "Musikken er pauset";
       }
     }
+
+    window.addEventListener("click", function() {
+      const overlay = document.getElementById("overlay");
+      if (overlay) {
+        overlay.classList.add("fade-out");
+        setTimeout(() => {
+          overlay.remove();
+        }, 350);
+      }
+    });
   </script>
 </body>
 </html>
