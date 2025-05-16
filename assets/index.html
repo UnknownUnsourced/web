@@ -88,8 +88,8 @@
     <li><a id="links" href="krus-og-bolle-komma.html" onclick="spil_random_kliklyd()">Break The Tower!</a></li>
     <li><a id="links" href="et-eller-en.html" onclick="spil_random_kliklyd()">physics geam</a></li>
     <li><a id="links" href="intetkoen-og-faelleskoen.html" onclick="spil_random_kliklyd()">Dreader</a></li>
-    <li><a id="links" href="areal.html">Moto X3M</a></li>
-    <li><a id="links" href="ku-eller-kun.html">Fill Maze</a></li>
+    <li><a id="links" href="areal.html" onclick="spil_random_kliklyd()">Moto X3M</a></li>
+    <li><a id="links" href="ku-eller-kun.html" onclick="spil_random_kliklyd()">Fill Maze</a></li>
   </ul>
   <li id="devlog"><a href="devlog.html">devlog</a></li>
   <h2 id="lavet">lavet af UnknownUnsourced</h2>
@@ -204,7 +204,7 @@
     window.addEventListener("click", function startMusik() {
       if (musik.paused) {
         musik.muted = true;
-        musik.volume = 0.25;
+        musik.volume = 0.15;
         spilmusik(ligenu);
         const overlay = document.getElementById("overlay");
         window.removeEventListener("click", startMusik);
