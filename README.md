@@ -1,4 +1,4 @@
-# https://unknownunsourced.github.io/web/html/index.html
+# https://unknownunsourced.github.io/web/assets/index.html
 ## Hvordan kan jeg download denne website hvis den bliver slettet?
 På toppen af websiten skulle der være en "< > Code" knap. Tryk på den, og så tryk på "Download ZIP" nederst.
 
