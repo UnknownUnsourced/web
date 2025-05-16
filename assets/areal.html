@@ -4,6 +4,23 @@
   <title>Areal-form</title>
   <link rel="stylesheet" href="dark.css">
   <link rel="icon" type="image/png" href="decals/icon.png">
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const favicons = [
+        "decals/icon.png",
+        "decals/icon2.png",
+        "decals/icon3.png"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * favicons.length);
+      document.querySelectorAll("link[rel='icon']").forEach(el => el.remove());
+      const newFavicon = document.createElement("link");
+      newFavicon.rel = "icon";
+      newFavicon.type = "image/png";
+      newFavicon.href = favicons[randomIndex];
+      document.head.appendChild(newFavicon);
+    })
+  </script>
   <style>
     html, body {
       margin: 0;

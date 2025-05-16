@@ -5,6 +5,23 @@
     <title>devlog</title>
     <link rel="stylesheet" href="devlog.css">
     <link rel="icon" type="image/png" href="decals/icon.png">
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+        const favicons = [
+            "decals/icon.png",
+            "decals/icon2.png",
+            "decals/icon3.png"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * favicons.length);
+        document.querySelectorAll("link[rel='icon']").forEach(el => el.remove());
+        const newFavicon = document.createElement("link");
+        newFavicon.rel = "icon";
+        newFavicon.type = "image/png";
+        newFavicon.href = favicons[randomIndex];
+        document.head.appendChild(newFavicon);
+        })
+    </script>
     <style>
         body {
             opacity: 0;
@@ -27,6 +44,16 @@
     <div id="hjem"><a href="index.html">Hjem</a></div>
     <h1>Devlog;</h1>
     <h4 id ="underdevlog">du er en nørd, hvis du er her.</h4>
+    <!-- 0.11 -->
+    <h2>0.11;</h2>
+    <h3>+ Musik ved /assets/index.html;</h3>
+    <h3 id="under">+ Storebror - Noah Carter</h3>
+    <h3 id="under">+ E.T.A - KESI, Gilli</h3>
+    <h3 id="under">+ Baku - KESI, ICEKID</h3>
+    <h3 id="under">+ Signaler - MAS, Kundo</h3>
+    <h3 id="under">+ Overlay for at få lyd.</h3>
+    <h3>+ tung tung tung sahur (titlen ved /assets/index.html)</h3>
+    <h3>+ Random ikoner/favicons</h3>
 
     <!-- 0.10 -->
     <h2>0.10;</h2>
@@ -85,6 +112,6 @@
         window.addEventListener("load", () => {
             document.body.classList.add("fade-in");
         });
-  </script>
+    </script>
 </body>
 </html>
